@@ -1,9 +1,9 @@
 # wiki
 Wiki for Ruby on Rails and Nuxt.js https://github.com/oanstein/wiki/wiki
 
-- [Ubuntu](https://github.com/oanstein/wiki/new/master?readme=1#ubuntu)
-- [Ruby on Rails](https://github.com/oanstein/wiki/new/master?readme=1#ruby-on-rails)
-- [Git Commands](https://github.com/oanstein/wiki/new/master?readme=1#git-commands)
+- [Ubuntu](https://github.com/oanstein/wiki/tree/master#ubuntu)
+- [Ruby on Rails](https://github.com/oanstein/wiki/tree/master#ruby-on-rails)
+- [Git Commands](https://github.com/oanstein/wiki/tree/master#git-commands)
 
 
 # Ubuntu
