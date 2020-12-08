@@ -15,7 +15,32 @@ Wiki for Ruby on Rails and Nuxt.js https://github.com/oanstein/wiki/wiki
 `npm install -g c9`
 
 ***
+
+## Check disk space usage
+*Check disk space usage** with http://lintut.com/ncdu-check-disk-usage/
+
+`ncdu` Check current folder and subfolder
+
+`sudo ncdu -x /` Check all files in workspace
+
+`bundle clean --force` will remove old gems (or older versions of
+currently-used gems) previously installed, but not currently being used in your
+current Gemfile.lock manifest.
+
+`yarn cache clean <module_name>` Clear the global cache;
+https://yarnpkg.com/lang/en/docs/cli/cache/#toc-yarn-cache-clean
+
 ***
+
+## Clean up Linux
+```
+sudo apt-get update        # Fetches the list of available updates
+sudo apt-get upgrade       # Installs some updates; does not remove packages
+sudo apt-get full-upgrade  # Installs updates; may also remove some packages, if needed
+sudo apt-get autoremove    # Removes any old packages that are no longer needed
+````
+
+`sudo apt-get update && sudo apt-get autoclean && sudo apt-get clean && sudo apt-get autoremove`
 
 # Ruby on Rails
 ## Database
