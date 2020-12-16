@@ -166,3 +166,10 @@ https://stackoverflow.com/questions/2643502/how-to-solve-permission-denied-publi
 
 ## Generating a new SSH key and adding it to the ssh-agent
 https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+***
+
+## How to change your Git editor
+There are two ways in which this can be done. The first is via the terminal; this is useful if you want your editor to be Nano, for example. The command to do this is `git config --global core.editor "nano"`. You can change the highlighted section with your editor of choice!
+
+Another way to do this is to edit the `.gitconfig` file in your `home` directory. The location of this file depends on the operating system you're using.
