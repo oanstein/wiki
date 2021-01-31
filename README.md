@@ -85,6 +85,18 @@ Recreate the test database from the current schema.rb
 
 ***
 
+## Git `main`
+Using 'master' as the name for the initial branch. This default branch name
+is subject to change. To configure the initial branch name to use in all
+of your new repositories, which will suppress this warning, call:
+
+    git config --global init.defaultBranch <name>
+ 
+Names commonly chosen instead of 'master' are 'main', 'trunk' and
+'development'. The just-created branch can be renamed via this command:
+ 
+    git branch -m <name>
+
 ## [How do I properly force a Git push?](https://stackoverflow.com/questions/5509543/how-do-i-properly-force-a-git-push)
 
 Just do:
