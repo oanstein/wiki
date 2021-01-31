@@ -77,6 +77,9 @@ Recreate the test database from the current schema.rb
 ***
 
 # Git Commands
+## Docs / Tutorials
+[Git Tutorial for Beginners - Crash Course](https://academind.com/tutorials/git-the-basics)
+
 ## [Git Overwrite master with branch](https://stackoverflow.com/questions/30105210/git-overwrite-master-with-branch)
 
 `git branch -f master dev_branch` will rewrite local master branch.
