@@ -102,6 +102,8 @@ Names commonly chosen instead of 'master' are 'main', 'trunk' and
  
     git branch -m <name>
 
+***
+
 ## [How do I properly force a Git push?](https://stackoverflow.com/questions/5509543/how-do-i-properly-force-a-git-push)
 
 Just do:
