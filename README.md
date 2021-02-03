@@ -73,6 +73,32 @@ Recreate the test database from the current schema.rb
 
     sudo service postgresql restart
 
+### DB: Upgrade Hobby
+https://devcenter.heroku.com/articles/upgrading-heroku-postgres-databases#upgrading-with-pg-copy
+
+1. `heroku addons:create heroku-postgresql:hobby-dev  --app foora-api-staging`
+
+2. `heroku maintenance:on --app foora-staging`
+
+3. `heroku maintenance:on --app foora-api-staging`
+
+4. NEW Database name!  `heroku pg:copy DATABASE_URL HEROKU_POSTGRESQL_COBALT_URL --app foora-api-staging`
+
+5. (Optional) `heroku pg:info --app foora-api-staging`
+
+6. `heroku pg:promote HEROKU_POSTGRESQL_COBALT --app foora-api-staging`
+
+7. `heroku maintenance:off --app foora-api-staging`
+
+8. `heroku maintenance:off --app foora-staging`
+
+9. Test if everything works
+
+10. Get name of old DB `heroku pg:info --app foora-api-staging`
+
+11. `heroku addons:destroy HEROKU_POSTGRESQL_GOLD --app foora-api-staging`
+
+
 ***
 ***
 
