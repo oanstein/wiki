@@ -4,6 +4,7 @@ Wiki for Ruby on Rails and Nuxt.js https://github.com/oanstein/wiki/wiki
 - [Ubuntu](https://github.com/oanstein/wiki/tree/master#ubuntu)
 - [Ruby on Rails](https://github.com/oanstein/wiki/tree/master#ruby-on-rails)
 - [Git Commands](https://github.com/oanstein/wiki/tree/master#git-commands)
+- [Shasum Verification](https://github.com/oanstein/wiki/tree/master#shasum-verification)
 
 
 # Ubuntu
@@ -218,3 +219,11 @@ https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-
 There are two ways in which this can be done. The first is via the terminal; this is useful if you want your editor to be Nano, for example. The command to do this is `git config --global core.editor "nano"`. You can change the highlighted section with your editor of choice!
 
 Another way to do this is to edit the `.gitconfig` file in your `home` directory. The location of this file depends on the operating system you're using.
+
+
+***
+***
+
+# Shasum Verification
+
+    shasum -a 256 -c Electron-Cash-*.dmg.sha256sum
