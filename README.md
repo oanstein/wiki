@@ -248,3 +248,37 @@ Instead of typing the path to the Daedalus installer executable use drag and dro
 You should see the following output, where string on the second line is the SHA256 checksum:
 
 `66c27653da9109aea22842ed77a425dbef47f9408eeed76fa3c18c66e95bc3ca~/Downloads/daedalus-4.2.0-mainnet-18540.pkg`
+
+***
+***
+
+# MacOS PGP signature verification instructions
+
+1.  Obtain both the Daedalus installer .pkg file and its corresponding .pkg.asc signature file – put them in the same directory.
+2.  If you already have the GPG Suite installed, and a personal key generated, please skip to step 5, and if not, proceed with the next step.
+3.  Go to [https://gpgtools.org](https://gpgtools.org/), head to the GPG Suite section, download the .dmg file and install it:
+    *   Right-click the .dmg file, then Open, which will open a new window with two icons: Install and Uninstall
+    *   Right-click the Install icon, and choose Open with.. -> Installer, which should start the GPG Suite installer
+    *   Follow through the installation wizard
+4.  Once GPG Suite installation completes, it will ask you to create a new key pair (this is required for step 6, so please don’t skip it):
+    *   Enter a name and an email that suit you personally.
+    *   Choose a passphrase to protect your personal key (NOTE: the passphrase can be empty, but it is not recommended if you intend to use this key and GPG Suite in future).
+5.  Import the IOHK key using the GPG Keychain application:
+    *   Select Key -> Lookup Key on Key Server in the application menu
+    *   Search for signing.authority@iohk.io
+    *   Choose the key with fingerprint CBFAA9BA with the user ID “IOHK Signing Authority <signing.authority@iohk.io>”, then click Retrieve Key
+    *   Verify (right-click the imported key, then Details) that the fingerprint of the imported key is D325 87D4 090F E461 CAEE 0FF4 966E 5CB9 CBFA A9BA
+
+    *   if it’s not, the wrong key was imported, right-click and delete
+    *   if it is, we are good to proceed with the next step.
+6.  Sign the imported IOHK key (this designates trust and is required for the next step):
+    *   Right-click on the imported IOHK key, then “Sign”.
+7.  Verify the installer binary:
+    *   Right-click the Daedalus installer (.pkg file) in Finder (do NOT right click on the .asc file, that will not work), then select Services -> OpenPGP: Verify Signature of File (the .asc signature file must reside in the same directory)
+    *   The Verification Results dialog will then appear with the verdict:  
+
+        Trusted signature  
+        IOHK Signing Authority <signing.authority@iohk.io>  
+        9F98 40B5 0AE5 39A2 732C F646 C131 557F 1471 941A  
+
+        Anything different means there was no valid signature for the installer.
