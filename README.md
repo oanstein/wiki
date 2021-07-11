@@ -224,6 +224,27 @@ Another way to do this is to edit the `.gitconfig` file in your `home` directory
 ***
 ***
 
-# Shasum Verification
+# MacOS checksum verification instructions (shasum)
+
+**Method 1:**
 
     shasum -a 256 -c Electron-Cash-*.dmg.sha256sum
+
+---
+**Method 2:**
+
+SHA256 checksum can be verified using the following command:
+
+shasum -a 256 ~/Downloads/daedalus-4.2.0-mainnet-18540.pkg
+Instead of typing the path to the Daedalus installer executable use drag and drop:
+
+1. Open Terminal
+2. Type or paste:
+`shasum -a 256`
+3. Press space key
+4. Drag and drop Daedalus installer from Finder to Terminal
+5. Press enter key
+
+You should see the following output, where string on the second line is the SHA256 checksum:
+
+`66c27653da9109aea22842ed77a425dbef47f9408eeed76fa3c18c66e95bc3ca~/Downloads/daedalus-4.2.0-mainnet-18540.pkg`
